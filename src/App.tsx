@@ -7,6 +7,7 @@ import Section4 from './components/Section4';
 import Section5 from './components/Section5';
 
 
+
 function App() {
   const [animalData, setAnimalData]: any = useState()
 

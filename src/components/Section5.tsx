@@ -1,6 +1,7 @@
 import React from 'react'
 import '../components/section5.sass'
 import monkeys from '../assets/monkeys.jpg'
+import SimpleSlider from './SliderSlick'
 
 function Section5() {
   return (

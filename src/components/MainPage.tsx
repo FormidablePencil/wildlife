@@ -1,6 +1,6 @@
 import React from 'react'
 import '../components/mainPage.sass'
-import tigerNew from '../assets/tigerNew.png'
+import tigerNew from '../assets/tigerNew.jpg'
 
 
 
