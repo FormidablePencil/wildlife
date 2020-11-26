@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import elephant from '../assets/elephant.jpg'
 import wolf from '../assets/wolf.jpg'
 import panda from '../assets/panda.jpg'
@@ -27,11 +27,23 @@ export default function SimpleSlider() {
     <img src={koala} alt="koala" />,
     <img src={gorilla} alt="gorilla" />,
     <img src={bengalTiger} alt="bengal-tiger" />,
-    // <img src={whale} alt="blue-whale" />,
-    // <img src={redPanda} alt="red-panda" />,
-    // <img src={snowLeopard} alt="snow-leopard" />,
-    // <img src={rhino} alt="black-rhino" />,
-    // <img src={turtle} alt="sea-turtle" />,
+    <img src={whale} alt="blue-whale" />,
+    <img src={redPanda} alt="red-panda" />,
+    <img src={snowLeopard} alt="snow-leopard" />,
+    <img src={rhino} alt="black-rhino" />,
+    <img src={turtle} alt="sea-turtle" />,
+    // <div style={{background: 'red'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'blue'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'gray'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'black'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'pink'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'lightBlue'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'yellow'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'white'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'orange'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'purple'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'green'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
+    // <div style={{background: 'lightPink'}}>kkkkkkkkkkkkkkkkkkkkkkkkkkkk</div>,
   ]
 
 
@@ -46,12 +58,12 @@ export default function SimpleSlider() {
     autoplay: true,
   };
   return (
-    <div className='container-full'>
+    <div>
       <Slider  {...settings} className='slider-adjustments'>
         {photos.map((item) =>
           <div>
             <div className='containers-here'>
-              <div className='imgs'>
+              <div className='imgss' >
                 {item}
               </div>
             </div>
