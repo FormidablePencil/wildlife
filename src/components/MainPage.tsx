@@ -11,12 +11,12 @@ function MainPage() {
 
   return (
     <div >
-      <picture>
+      {/* <picture>
         <source media="(min-width: 800px)" srcSet={tigerNew} />
         <source media="(max-width: 800px)" srcSet={roaringTiger} />
         <img className='headerImage' src="OtherImage.png" alt="IfItDoesntMatchAnyMedia" />
-      </picture>
-
+      </picture> */}
+      <img className='headerImage' src={tigerNew} alt="tiger"/>
     </div>
   )
 }

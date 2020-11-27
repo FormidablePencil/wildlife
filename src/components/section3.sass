@@ -1,4 +1,47 @@
-.orangeBlock
-  background: orange
-  display: block
-  height: 100px
+// .orangeBlock
+//   background: orange
+//   display: block
+//   height: 100px
+
+// p
+//   color: orangered
+//   font-weight: 900
+
+@media (min-width: 801px)
+  .onDesktop
+
+  .onMobile
+    display: none
+
+@media (max-width: 800px)
+  .onMobile
+    height: 2200px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  .onDesktop
+    display: none
+
+.mobileImg
+  width: 200px
+  height: 200px
+  opacity: 80%
+  margin: 0px
+  // transition: transform 200ms, filter 500ms ease-in-out
+
+  img
+    border-radius: 10px
+    width: 150px
+    height: 250px
+    object-fit: cover
+    position: relative
+    color: blue
+    display: flex
+    justify-content: center
+
+  &:hover
+    // transition: transform 200ms, filter 500ms ease-in-out
+    transform-origin: center center
+    transform: scale(1.1)
+    opacity: 100%

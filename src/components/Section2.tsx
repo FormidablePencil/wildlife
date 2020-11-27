@@ -11,7 +11,7 @@ function Section2() {
   return (
     <div className='container'>
       <div className='orangeBox'>
-        <div className=''>
+        <div>
           {arrOfText.map(text =>
             <h1>{text}</h1>
           )}
