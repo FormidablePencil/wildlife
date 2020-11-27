@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import elephant from '../assets/elephant.jpg'
 import wolf from '../assets/wolf.jpg'
 import panda from '../assets/panda.jpg'
@@ -48,7 +48,6 @@ export default function SimpleSlider() {
 
 
   var settings = {
-    arrows: true,
     dots: true,
     infinite: true,
     speed: 1500,
@@ -57,16 +56,22 @@ export default function SimpleSlider() {
     slidesToScroll: 1,
     autoplay: true,
   };
+  // className='container-full'
+  // className='slider-adjustments'
+  // className='containers-here'
+  // className='imgs'
   return (
-    <div>
+    <div className='container-full'>
       <Slider  {...settings} className='slider-adjustments'>
         {photos.map((item) =>
-          <div>
+
+          <div >
             <div className='containers-here'>
-              <div className='imgss' >
+              <div className='imgs'>
                 {item}
               </div>
             </div>
+
           </div>
         )}
       </Slider>

@@ -18,9 +18,6 @@ function Section3() {
       <div className='orangeBlock'>
         <h1>Click on any picture above to explore more.</h1>
       </div>
-      <div>
-        {/* <SimpleSlider/> */}
-      </div>
     </div>
   )
 }
