@@ -2,6 +2,12 @@ import React from 'react'
 import '../components/mainPage.sass'
 import tigerNew from '../assets/tigerNew.jpg'
 import roaringTiger from '../assets/roaringBengalNew.jpg'
+import { Route, BrowserRouter as Router, Link } from 'react-router-dom';
+import Section2 from './Section2';
+import Section5 from './Section5';
+import Section4 from './Section4';
+import Section3 from './Section3';
+
 
 
 
@@ -16,7 +22,13 @@ function MainPage() {
         <source media="(max-width: 800px)" srcSet={roaringTiger} />
         <img className='headerImage' src="OtherImage.png" alt="IfItDoesntMatchAnyMedia" />
       </picture> */}
+      {/* <Link to='/section2'> */}
       <img className='headerImage' src={tigerNew} alt="tiger"/>
+      {/* </Link> */}
+      <Section2/>
+      <Section3/>
+      <Section4/>
+      <Section5/>
     </div>
   )
 }

@@ -5,6 +5,9 @@ import Section2 from './components/Section2';
 import Section3 from './components/Section3';
 import Section4 from './components/Section4';
 import Section5 from './components/Section5';
+import { Route, BrowserRouter as Router,Switch } from 'react-router-dom';
+import LinkedPage from './components/LinkedPage';
+
 
 
 
@@ -32,17 +35,21 @@ function App() {
 
 
   return (
-    <div>
+    <div style={{overflow: 'hidden'}}>
       {/* {animalData && animalData.species[0].description}
     
       {animalData
         && <img src={`url({animalData.species[0].image.url})`} alt="image" />
       } */}
-      <MainPage />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
+      <Router>
+
+      <Switch>
+        <Route path='/' exact component={MainPage} />
+   
+        <Route path='/linkedPage' component={LinkedPage} />
+      </Switch>
+
+      </Router>
 
 
     </div>

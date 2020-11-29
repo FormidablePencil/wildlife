@@ -19,64 +19,80 @@ import './section3.sass'
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import LinkedPage from './LinkedPage';
 
-
 export const photos = [
-  // <Router>
-  //   <Route path='/linkedPage' exact component={LinkedPage} />
-  //   <a href="/linkedPage">
-  //   </a>
 
-
+  <a href="/linkedPage">
     <div>
-
       <img src={elephant} alt="elephant" />
       <p className='nameText'>Elephant</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={wolf} alt="wolf" />
       <p className='nameText'>Wolf</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={panda} alt="panda" />
       <p className='nameText'>Panda</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={seal} alt="seal" />
       <p className='nameText'>Seal</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={koala} alt="koala" />
       <p className='nameText'>Koala</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={gorilla} alt="gorilla" />
       <p className='nameText'>Gorilla</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={bengalTiger} alt="bengal-tiger" />
       <p className='nameText'>Tiger</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={whale} alt="blue-whale" />
       <p className='nameText'>Blue Whale</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={redPanda} alt="red-panda" />
       <p className='nameText'>Red Panda</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={snowLeopard} alt="snow-leopard" />
       <p className='nameText'>Snow Leopard</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={rhino} alt="black-rhino" />
       <p className='nameText'>Rhinocerus</p>
-    </div>,
-  <div>
+    </div>
+  </a>,
+  <a href="/linkedPage">
+    <div>
       <img src={turtle} alt="sea-turtle" />
       <p className='nameText'>Sea Turtle</p>
     </div>
-  // </Router>
+  </a>
 ]
 
 export default function SimpleSlider() {
@@ -100,6 +116,7 @@ export default function SimpleSlider() {
             <div className='imgs'>
               {item}
             </div>
+
           </div>
         )}
       </Slider>
