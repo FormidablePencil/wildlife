@@ -1,8 +1,6 @@
 import React from 'react'
 import '../components/mainPage.sass'
 import tigerNew from '../assets/tigerNew.jpg'
-import roaringTiger from '../assets/roaringBengalNew.jpg'
-import { Route, BrowserRouter as Router, Link } from 'react-router-dom';
 import Section2 from './Section2';
 import Section5 from './Section5';
 import Section4 from './Section4';

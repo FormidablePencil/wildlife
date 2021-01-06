@@ -3,96 +3,49 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import elephant from '../assets/elephant.jpg'
-import wolf from '../assets/wolf.jpg'
 import panda from '../assets/panda.jpg'
-import seal from '../assets/seal.jpg'
-import koala from '../assets/koala.jpg'
 import gorilla from '../assets/gorilla.jpg'
+import orangutan from '../assets/orangutan.jpg'
 import bengalTiger from '../assets/bengalTiger.jpg'
 import whale from '../assets/whale.jpg'
 import redPanda from '../assets/redPanda.jpg'
 import snowLeopard from '../assets/snowLeopard.jpg'
 import rhino from '../assets/rhino.jpg'
 import turtle from '../assets/turtle.jpg'
+import penguin from '../assets/penguin.jpg'
+import polarBear from '../assets/polarBear.jpg'
 import './slider.sass'
 import './section3.sass'
-import { Route, BrowserRouter as Router } from 'react-router-dom';
-import LinkedPage from './LinkedPage';
+import { DynamicImage, DynamicImageT } from '../reusables/DynamicStuff';
+
+const imageData: DynamicImageT[] = [
+  { name: "Elephant", image: bengalTiger, alt: "Elephant" },
+  { name: "Wolf", image: panda, alt: "wolf" },
+  { name: "Panda", image: whale, alt: "Panda" },
+  { name: "Seal", image: elephant, alt: "Seal" },
+  { name: "Gorilla", image: gorilla, alt: "Gorilla" },
+  { name: "Snow Leopard", image: snowLeopard, alt: "Snow Leopard" },
+  { name: "Koala", image: orangutan, alt: "Koala" },
+  { name: "Bengal Tiger", image: turtle, alt: "Bengal Tiger" },
+  { name: "Rhinocerus", image: rhino, alt: "Rhinocerus" },
+  { name: "Blue Whale", image: penguin, alt: "Blue Whale" },
+  { name: "Red Panda", image: redPanda, alt: "Red Panda" },
+  { name: "Sea Turtle", image: polarBear, alt: "Sea Turtle" },
+]
 
 export const photos = [
-
-  <a href="/linkedPage">
-    <div>
-      <img src={elephant} alt="elephant" />
-      <p className='nameText'>Elephant</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={wolf} alt="wolf" />
-      <p className='nameText'>Wolf</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={panda} alt="panda" />
-      <p className='nameText'>Panda</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={seal} alt="seal" />
-      <p className='nameText'>Seal</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={koala} alt="koala" />
-      <p className='nameText'>Koala</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={gorilla} alt="gorilla" />
-      <p className='nameText'>Gorilla</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={bengalTiger} alt="bengal-tiger" />
-      <p className='nameText'>Tiger</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={whale} alt="blue-whale" />
-      <p className='nameText'>Blue Whale</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={redPanda} alt="red-panda" />
-      <p className='nameText'>Red Panda</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={snowLeopard} alt="snow-leopard" />
-      <p className='nameText'>Snow Leopard</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={rhino} alt="black-rhino" />
-      <p className='nameText'>Rhinocerus</p>
-    </div>
-  </a>,
-  <a href="/linkedPage">
-    <div>
-      <img src={turtle} alt="sea-turtle" />
-      <p className='nameText'>Sea Turtle</p>
-    </div>
-  </a>
+  <DynamicImage imageData={imageData[0]} />,
+  <DynamicImage imageData={imageData[1]} />,
+  <DynamicImage imageData={imageData[2]} />,
+  <DynamicImage imageData={imageData[3]} />,
+  <DynamicImage imageData={imageData[4]} />,
+  <DynamicImage imageData={imageData[5]} />,
+  <DynamicImage imageData={imageData[6]} />,
+  <DynamicImage imageData={imageData[7]} />,
+  <DynamicImage imageData={imageData[8]} />,
+  <DynamicImage imageData={imageData[9]} />,
+  <DynamicImage imageData={imageData[10]} />,
+  <DynamicImage imageData={imageData[11]} />,
 ]
 
 export default function SimpleSlider() {
@@ -111,12 +64,10 @@ export default function SimpleSlider() {
     <div className='container-full'>
       <Slider  {...settings} className='slider-adjustments'>
         {photos.map((item) =>
-
           <div className='containers-here'>
             <div className='imgs'>
               {item}
             </div>
-
           </div>
         )}
       </Slider>
