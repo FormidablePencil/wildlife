@@ -4,7 +4,7 @@ import './gradients-support.sass'
 
 function SupportUs({Monkeys}) {
   return (
-    <div>
+    <div style={{zIndex: 1000, position: 'relative', marginTop: -100}}>
       <div className='aboveGradient' />
       <div className='blackBox' />
       <div className='footerPicture'>
