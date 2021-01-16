@@ -13,6 +13,8 @@ import rhino from '../../assets/rhino.jpg'
 import snowLeopard from '../../assets/snowLeopard.jpg'
 import turtle from '../../assets/turtle.jpg'
 import { animalsApi } from '../../ApiInfo'
+import OrangeBox from './OrangeBox'
+import CardComponent from './CardComponent'
 
 //************** Use REDUX for saving local storage after refresh*/
 
@@ -35,39 +37,15 @@ function LinkedPage() {
 
   return (
     <div>
-      <div className="card" style={{ right: '25%' }}>
-        <div className="card-image">
-          <figure className="image is-4by3">
-            <img src={cardAnimals[accessor].Image} alt="Placeholder image" className="cardImage" />
-          </figure>
-        </div>
-        <div className="card-content">
-          {/* <figure className="image is-48x48"> */}
-          <div className='grayBoxLink'>
-            <h2>{animalsApi[accessor].Name}</h2>
-            <h2>{animalsApi[accessor].Location}</h2>
-            <h2>{animalsApi[accessor].Population}</h2>
-            <h2>{animalsApi[accessor].Status}</h2>
-          </div>
-          {/* </figure> */}
-
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          {/* <button className="button is-danger">Go Back</button> */}
-        </div>
-      </div>
-
-
-      <div className='orangeBoxLink'>
-        <h1>{animalsApi[accessor].Description}</h1>
-        <a href="/">
-          <button className="button is-light" style={{ color: 'white', position: 'absolute', bottom: '20px', right: '100px' }}>Go Back</button>
-        </a>
-        <button onClick={() => setAccessor(accessor + 1)} className="button is-light" style={{}}>add</button>
-      </div>
-      <div>
-        <img src={backgroundAnimals[accessor].Image} alt="" className="background" />
-      </div>
+      <CardComponent
+        cardAnimals={cardAnimals}
+        accessor={accessor}
+      />
+      <OrangeBox
+        accessor={accessor}
+        setAccessor={setAccessor}
+      />
+      <img src={backgroundAnimals[accessor].Image} className="background" />
     </div >
   )
 }
