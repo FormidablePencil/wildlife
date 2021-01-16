@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import MainPage from './components/main-page/MainPage';
+import MainPage from './components/main/MainPage';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import LinkedPage from './components/linked/index';
 

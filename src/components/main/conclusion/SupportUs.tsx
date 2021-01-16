@@ -1,8 +1,8 @@
 import React from 'react'
-import './end.sass'
-import monkeys from '../../assets/monkeys.jpg'
+import './support.sass'
+import './gradients-support.sass'
 
-function End() {
+function SupportUs({Monkeys}) {
   return (
     <div>
       <div className='aboveGradient' />
@@ -16,10 +16,10 @@ function End() {
           <h1>Help Wildlife today!</h1>
         </div>
 
-        <img src={monkeys} alt="monkeys" className='monkey' />
+        <img src={Monkeys} alt="monkeys" className='monkey' />
       </div>
     </div>
   )
 }
 
-export default End
+export default SupportUs
