@@ -1,23 +1,12 @@
 import React from 'react'
 import './support.sass'
-import './gradients-support.sass'
 
-function SupportUs({Monkeys}) {
+function SupportUs() {
   return (
-    <div style={{zIndex: 1000, position: 'relative', marginTop: -100}}>
-      <div className='aboveGradient' />
-      <div className='blackBox' />
-      <div className='footerPicture'>
-        <div className='topGradient' />
-        <div className='rightGradient' />
-        <div className='bottomGradient' />
-        <div className='leftGradient' />
-        <div className='absolute'>
-          <h1>Help Wildlife today!</h1>
-        </div>
-
-        <img src={Monkeys} alt="monkeys" className='monkey' />
-      </div>
+    <div className='support-container'>
+      <h1 className='support-text'>
+        Start Helping Wildlife!
+      </h1>
     </div>
   )
 }

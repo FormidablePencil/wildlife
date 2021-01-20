@@ -1,0 +1,64 @@
+.modal-container
+  position: fixed
+  top: 0vh
+  z-index: 2000000
+
+.modal-outside-bg
+  height: 100vh
+  width: 100vw
+  position: relative
+  z-index: 20000000
+
+.modal-bg
+  display: flex
+  position: absolute
+  z-index: 2000000
+  bottom: 0px
+  left: 25%
+  background: #1a1a1a
+  width: 50vw
+  height: 30vh
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+
+.modal-bg-deactivate
+  animation: bounceIn .5s
+  animation-fill-mode: forwards
+
+.modal-bg-activate
+  animation: bounceOut .7s
+
+@keyframes bounceIn
+  0%
+    height: 30vh
+  100%
+    height: 0px
+
+@keyframes bounceOut
+  0%
+    height: 0px
+  60%
+    height: 32vh
+  100%
+    height: 30vh
+
+.facts
+  margin-left: 30px
+  h2
+    width: 100%
+    margin-bottom: -2vh
+  h4
+    color: #6a6a6a
+    margin-bottom: 1.5vh
+
+h4
+  color: #6a6a6a
+  font-family: nunito-light
+  word-spacing: 1px
+
+.anim
+  transform: rotateY(180deg)
+  transition: transform 1s
+.anim-off
+  transition: rotateY 1s
+  transform: rotateY(0deg)

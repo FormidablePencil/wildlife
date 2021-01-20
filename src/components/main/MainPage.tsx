@@ -1,19 +1,17 @@
-import React from 'react'
-import { DynamicImage, DynamicImageT } from '../../reusables/DynamicStuff';
-import BengalTiger from '../../assets/bengalTiger.jpg'
-import TigerNew from '../../assets/tigerNew.jpg'
-import Panda from '../../assets/panda.jpg'
-import Whale from '../../assets/whale.jpg'
-import Elephant from '../../assets/elephant.jpg'
-import Gorilla from '../../assets/gorilla.jpg'
-import SnowLeopard from '../../assets/snowLeopard.jpg'
-import Orangutan from '../../assets/orangutan.jpg'
-import Turtle from '../../assets/turtle.jpg'
-import Rhino from '../../assets/rhino.jpg'
-import Penguin from '../../assets/penguin.jpg'
-import RedPanda from '../../assets/redPanda.jpg'
-import PolarBear from '../../assets/polarBear.jpg'
-import Monkeys from '../../assets/monkeys.jpg'
+import React, { useState } from 'react'
+import BengalTiger from '../../assets/images/bengalTiger.jpg'
+import TigerNew from '../../assets/images/tigerNew.jpg'
+import Panda from '../../assets/images/panda.jpg'
+import Whale from '../../assets/images/whale.jpg'
+import Elephant from '../../assets/images/elephant.jpg'
+import Gorilla from '../../assets/images/gorilla.jpg'
+import SnowLeopard from '../../assets/images/snowLeopard.jpg'
+import Orangutan from '../../assets/images/orangutan.jpg'
+import Turtle from '../../assets/images/turtle.jpg'
+import Rhino from '../../assets/images/rhino.jpg'
+import Penguin from '../../assets/images/penguin.jpg'
+import RedPanda from '../../assets/images/redPanda.jpg'
+import PolarBear from '../../assets/images/polarBear.jpg'
 import Article from './articles/Article';
 import SupportUs from './conclusion/SupportUs';
 import Introduction from './intro/Introduction';
@@ -22,37 +20,22 @@ import './mainPage.sass'
 import '../bg-boxes.sass'
 
 function MainPage() {
-  const imageData: DynamicImageT[] = [
-    { name: "Elephant", image: BengalTiger, alt: "Elephant" },
-    { name: "Wolf", image: Panda, alt: "wolf" },
-    { name: "Panda", image: Whale, alt: "Panda" },
-    { name: "Seal", image: Elephant, alt: "Seal" },
+
+  const myImages = [
+
+    { name: "Bengal Tiger", image: BengalTiger, alt: "Bengal Tiger" },
+    { name: "Panda", image: Panda, alt: "Panda" },
+    { name: "Blue Whale", image: Whale, alt: "Blue Whale" },
+    { name: "Elephant", image: Elephant, alt: "Elephant" },
     { name: "Gorilla", image: Gorilla, alt: "Gorilla" },
     { name: "Snow Leopard", image: SnowLeopard, alt: "Snow Leopard" },
-    { name: "Koala", image: Orangutan, alt: "Koala" },
-    { name: "Bengal Tiger", image: Turtle, alt: "Bengal Tiger" },
+    { name: "Orangutan", image: Orangutan, alt: "Orangutan" },
+    { name: "Turtle", image: Turtle, alt: "Turtle" },
     { name: "Rhinocerus", image: Rhino, alt: "Rhinocerus" },
-    { name: "Blue Whale", image: Penguin, alt: "Blue Whale" },
+    { name: "Penguin", image: Penguin, alt: "Penguin" },
     { name: "Red Panda", image: RedPanda, alt: "Red Panda" },
-    { name: "Sea Turtle", image: PolarBear, alt: "Sea Turtle" },
+    { name: "Polar Bear", image: PolarBear, alt: "Polar Bear" },
   ]
-
-  const photos = [
-    <DynamicImage imageData={imageData[0]} />,
-    <DynamicImage imageData={imageData[1]} />,
-    <DynamicImage imageData={imageData[2]} />,
-    <DynamicImage imageData={imageData[3]} />,
-    <DynamicImage imageData={imageData[4]} />,
-    <DynamicImage imageData={imageData[5]} />,
-    <DynamicImage imageData={imageData[6]} />,
-    <DynamicImage imageData={imageData[7]} />,
-    <DynamicImage imageData={imageData[8]} />,
-    <DynamicImage imageData={imageData[9]} />,
-    <DynamicImage imageData={imageData[10]} />,
-    <DynamicImage imageData={imageData[11]} />,
-  ]
-
-  const namesList = ['Elephant', 'Wolf', 'Panda', 'Seal', 'Koala', 'Gorilla', 'Tiger', 'Blue Whale', 'Red Panda', 'Snow Leopard', 'Rhinocerus', 'Sea Turtle']
 
   return (
     <div >
@@ -60,7 +43,8 @@ function MainPage() {
 
 
       <div className='middle-section-container'>
-        <ListSpecies photos={photos} />
+        <ListSpecies myImages={myImages} />
+        <hr style={{width: '80%', position: 'absolute', marginTop: '60vh'}} color='#484848'/>
         <Article />
       </div>
 
@@ -77,7 +61,7 @@ function MainPage() {
       <div className='grayBox6' />
       <div className='grayBox7' />
 
-      <SupportUs Monkeys={Monkeys} />
+      <SupportUs />
     </div>
   )
 }
