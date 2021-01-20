@@ -16,15 +16,12 @@ export const DynCard = ({ cardData, setAccessor, setModal }: any) => {
               className='myImage'
               src={cardData.img}
             />
-            {whichClicked === 0 ?
-              <div className='hover-animal' onClick={() => {
-                setAccessor(cardData.number)
-                setModal(true)
-              }}>
-                <h1>dsafsdf</h1>
-                {/* <p className='animal-name'>{cardData.name}</p> */}
-              </div>
-              : null}
+            <div className='hover-animal' onClick={() => {
+              setAccessor(cardData.number)
+              setModal(true)
+            }}>
+              <p className='animal-name'>dsafsdf</p>
+            </div>
           </div>
 
 
@@ -33,14 +30,12 @@ export const DynCard = ({ cardData, setAccessor, setModal }: any) => {
               className='myImage'
               src={cardData.img2}
             />
-            {whichClicked === 1 ?
-              <div className='hover-animal' onClick={() => {
-                setAccessor(cardData.number2)
-                setModal(true)
-              }}>
-                {/* <p className='animal-name1'>{cardData.name2}</p> */}
-              </div>
-              : null}
+            <div className='hover-animal' onClick={() => {
+              setAccessor(cardData.number2)
+              setModal(true)
+            }}>
+              <p className='animal-name'>dsafds</p>
+            </div>
           </div>
         </div>
       </div>

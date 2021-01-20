@@ -1,6 +1,6 @@
 .flip-card
-  width: 15vw
   height: 40vh
+  width: 100%
   border: 1px solid #f1f1f1
   perspective: 1000px
 
@@ -23,6 +23,7 @@
   backface-visibility: hidden
 
 .flip-card-front
+  width: 100% 
 
 .front-bg
   height: 100%
@@ -31,43 +32,26 @@
 .flip-card-back
   color: white
   transform: rotateY(180deg)
-
-// .flip-card-front:hover
-//   color: #dd9c4c
-//   position: absolute
-//   font-size: 30px
-//   font-weight: 500
-//   align-items: flex-end
-//   display: flex
-//   justify-content: center
-//   background-color: rgba(0, 0, 0, .7)
-//   text-align: center
-//   z-index: 1000
-//   position: absolute
-//   border-radius: 10px
-//   transition: background-color .5s
-.animal-name1:hover
-  transition: .5s
-  margin-bottom: 30px
+  width: 100%
 
 .hover-animal
   width: 15vw
   height: 40vh
   margin-top: -40vh
   position: absolute
-  z-index: 0
-  transition: background-color 1s
+  z-index: 1000
+  transition: background-color .5s
   font-size: 1px
 
-.hover-animal1
-  width: 30vw
-  height: 40vh
-  margin-top: -40vh
-  position: absolute
-  z-index: 1000
-  background: rgba(0, 0, 0, .6)
-  transition: background-color 1s
-  font-size: 1px
+.hover-animal:hover
+  background: rgba(0, 0, 0, .7)
+  transition: background-color .3s
 
 .animal-name
   transition: margin-bottom .3s
+
+.animal-name:hover
+  transition: .5s
+  margin-bottom: 30px
+
+.hover-animal1
