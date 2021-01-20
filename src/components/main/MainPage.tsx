@@ -22,7 +22,6 @@ import '../bg-boxes.sass'
 function MainPage() {
 
   const myImages = [
-
     { name: "Bengal Tiger", image: BengalTiger, alt: "Bengal Tiger" },
     { name: "Panda", image: Panda, alt: "Panda" },
     { name: "Blue Whale", image: Whale, alt: "Blue Whale" },

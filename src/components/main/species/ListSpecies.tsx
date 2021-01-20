@@ -1,96 +1,110 @@
+import { TIMEOUT } from 'dns'
 import React, { useEffect, useState } from 'react'
 import ReactCardFlip from 'react-card-flip'
-import Modal from './modal/Modal'
-import { DynCard, DynCardT } from '../../../reusables/DynCard'
-import './card-flip.sass'
 import './species.sass'
 
 function ListSpecies({ myImages }) {
-  const [accessor, setAccessor] = useState(0)
-  const [modal, setModal] = useState(false)
+  const [isFlipped, setIsFlipped] = useState(false)
+  const [isFlipped2, setIsFlipped2] = useState(false)
+  const [isFlipped3, setIsFlipped3] = useState(false)
+  const [isFlipped4, setIsFlipped4] = useState(false)
+  const [isFlipped5, setIsFlipped5] = useState(false)
+  const [isFlipped6, setIsFlipped6] = useState(false)
 
-  const cardData: DynCardT[] =
-    [
-      {
-        name: myImages[0].name,
-        name2: myImages[1].name,
-        img: myImages[0].image,
-        img2: myImages[1].image,
-        number: 0,
-        number2: 1,
-      },
-      {
-        name: myImages[2].name,
-        name2: myImages[3].name,
-        img: myImages[2].image,
-        img2: myImages[3].image,
-        number: 2,
-        number2: 3,
-      },
-      {
-        name: myImages[4].name,
-        name2: myImages[5].name,
-        img: myImages[4].image,
-        img2: myImages[5].image,
-        number: 4,
-        number2: 5,
-      },
-      {
-        name: myImages[6].name,
-        name2: myImages[7].name,
-        img: myImages[6].image,
-        img2: myImages[7].image,
-        number: 6,
-        number2: 7,
-      },
-      {
-        name: myImages[8].name,
-        name2: myImages[9].name,
-        img: myImages[8].image,
-        img2: myImages[9].image,
-        number: 8,
-        number2: 9,
-      },
-      {
-        name: myImages[10].name,
-        name2: myImages[11].name,
-        img: myImages[10].image,
-        img2: myImages[11].image,
-        number: 10,
-        number2: 11,
-      },
-    ]
+
+  // useEffect(() => {
+  //   setTimeout(() => setIsFlipped(prev => !prev), 8000)
+  //   setTimeout(() => setIsFlipped2(prev => !prev), 15000)
+  //   setTimeout(() => setIsFlipped3(prev => !prev), 10000)
+  //   setTimeout(() => setIsFlipped4(prev => !prev), 12000) 
+  //   setTimeout(() => setIsFlipped5(prev => !prev), 18000)
+  //   setTimeout(() => setIsFlipped6(prev => !prev), 20000)
+  // }, [isFlipped, isFlipped2, isFlipped3, isFlipped4, isFlipped5, isFlipped6])
 
   return (
     <div className='imagesContainer' >
 
-      {cardData.map((item, index) =>
-        <DynCard
-          cardData={cardData[index]}
-          setAccessor={setAccessor}
-          setModal={setModal}
-        />
-      )}
 
-      {modal ?
-        <Modal
-          modal={modal}
-          setModal={setModal}
-          myImages={myImages}
-          accessor={accessor}
-        />
-        : null}
-    </div>
-  )
-}
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[0]}
+          </div>
+        </a>
 
-export const HoverName = ({ name, number, setAccessor, setModal }) => {
-  return (
-    <div className='hover-animal' onClick={() => {
-      setAccessor(number)
-      setModal(true)
-    }}>
-      <p className='animal-name'>{name}</p>
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[1]}
+          </div>
+        </a> 
+      </ReactCardFlip>
+      <ReactCardFlip isFlipped={isFlipped2} flipDirection="horizontal">
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[2]}
+          </div>
+        </a>
+
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[3]}
+          </div>
+        </a>
+      </ReactCardFlip>
+      <ReactCardFlip isFlipped={isFlipped3} flipDirection="horizontal">
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[4]}
+          </div>
+        </a>
+
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[5]}
+          </div>
+        </a>
+      </ReactCardFlip>
+      <ReactCardFlip isFlipped={isFlipped4} flipDirection="horizontal">
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[6]}
+          </div>
+        </a>
+
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[7]}
+          </div>
+        </a>
+      </ReactCardFlip>
+      <ReactCardFlip isFlipped={isFlipped5} flipDirection="horizontal">
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[8]}
+          </div>
+        </a>
+
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[9]}
+          </div>
+        </a>
+      </ReactCardFlip>
+      <ReactCardFlip isFlipped={isFlipped6} flipDirection="horizontal">
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[10]}
+          </div>
+        </a>
+
+        <a href="/linkedPage">
+          <div className='image'>
+            {myImages[11]}
+          </div>
+        </a>
+      </ReactCardFlip>
+
+
     </div>
   )
 }
