@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { animalsApi } from '../../../../ApiInfo'
 import "./modal.sass"
 
-function Modal({ modal, setModal, myImages, accessor }) {
+function Modal({ modal, setModal, accessor }) {
   const [animationPlay, setAnimationPlay] = useState(false)
   const [scrollTop, setScrollTop] = useState(0);
 
@@ -10,14 +10,14 @@ function Modal({ modal, setModal, myImages, accessor }) {
     function onScroll() {
       let currentPosition = window.pageYOffset
       if (currentPosition > scrollTop && modal) {
-        setAnimationPlay(true)
+        setAnimationPlay(true) 
         setTimeout(() => setModal(false), 400)
       } else {
         setModal(true);
       }
       setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
     }
- 
+
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop])
@@ -28,7 +28,7 @@ function Modal({ modal, setModal, myImages, accessor }) {
         setAnimationPlay(true)
         setTimeout(() => setModal(false), 400)
       }} />
-      <div className={`modal-bg ${animationPlay ? 'modal-bg-deactivate' : 'modal-bg-activate'}`} style={{}}>
+      <div className={`modal-bg ${animationPlay ? 'modal-bg-deactivate' : 'modal-bg-activate'}`}>
 
         <div style={{ width: '30%' }}>
           <div className='facts'>
@@ -42,7 +42,6 @@ function Modal({ modal, setModal, myImages, accessor }) {
             <h4>{animalsApi[accessor].Status}</h4>
           </div>
         </div >
-
 
         <div style={{ width: '60%', marginLeft: '2vw' }}>
           <h2>Description:</h2>

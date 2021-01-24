@@ -1,63 +1,65 @@
 import React, { useState } from 'react'
+import ReactCardFlip from 'react-card-flip'
 import { VscCircleFilled, VscCircleOutline } from 'react-icons/vsc'
+import Modal from '../components/main/species/modal/Modal'
+import '../components/main/species/card-flip.sass'
 
 export interface DynCardT {
-  name, name2, img, img2, number, number2
+  image1, image2, name1, name2, acc1, acc2, alt1, alt2
 }
+
 export const DynCard = ({ cardData, setAccessor, setModal }: any) => {
-  const [whichClicked, setWhichClicked] = useState(0)
+  const [isAnimating, setIsAnimating] = useState(false)
+  const [isFlipped, setIsFlipped] = useState(false)
+  const [flipMe, setFlipMe] = useState(0)
+
+  const zeroCircle = () => flipMe === 0 ? <VscCircleFilled color='white' /> : <VscCircleOutline color='white' onClick={zero} />
+  const oneCircle = () => flipMe === 1 ? <VscCircleFilled color='white' /> : <VscCircleOutline color='white' onClick={one} />
+
+  const zero = () => {
+    setFlipMe(0)
+    setIsFlipped(false)
+  }
+  const one = () => {
+    setFlipMe(1)
+    setIsFlipped(true)
+  }
 
   return (
-    <div style={{ marginLeft: '20vw' }}>
-      <div className={`flip-card ${whichClicked === 0 ? 'flip-card-active' : 'flip-card'}`}>
-        <div className="flip-card-inner">
-          <div className="flip-card-front">
-            <img
-              className='myImage'
-              src={cardData.img}
-            />
-            {whichClicked === 0 ?
-              <div className='hover-animal' onClick={() => {
-                setAccessor(cardData.number)
-                setModal(true)
-              }}>
-                <h1>dsafsdf</h1>
-                {/* <p className='animal-name'>{cardData.name}</p> */}
-              </div>
-              : null}
-          </div>
-
-
-          <div className="flip-card-back">
-            <img
-              className='myImage'
-              src={cardData.img2}
-            />
-            {whichClicked === 1 ?
-              <div className='hover-animal' onClick={() => {
-                setAccessor(cardData.number2)
-                setModal(true)
-              }}>
-                {/* <p className='animal-name1'>{cardData.name2}</p> */}
-              </div>
-              : null}
+    <div className='card-container'>
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+        <div className='image'>
+          <img className='myImage' src={cardData.image1} alt={cardData.alt1} />
+          <div
+            onMouseEnter={() => setIsAnimating(true)}
+            onMouseLeave={() => setIsAnimating(false)}
+            className={`hover-animal ${isAnimating ? 'hover-animal-hover' : 'hover-animal'}`}
+            onClick={() => {
+              setModal(true)
+              setAccessor(cardData.acc1)
+            }}>
+            <p className={`animal-name ${isAnimating ? 'animal-name-hover' : 'animal-name'}`}>{cardData.name1}</p>
+            <p className={`click-more ${isAnimating ? 'click-more-hover' : 'click-more'}`}>click for more info</p>
           </div>
         </div>
-      </div>
 
-
-      <div style={{ margin: 20 }}>
-        {whichClicked === 1 ?
-          <VscCircleFilled style={{ marginRight: 10 }} color='white' size={30} />
-          :
-          <VscCircleOutline onClick={() => setWhichClicked(1)} style={{ marginRight: 10 }} color='white' size={30} />
-        }
-        {whichClicked === 0 ?
-          <VscCircleFilled style={{ marginRight: 10 }} color='white' size={30} />
-          :
-          <VscCircleOutline onClick={() => setWhichClicked(0)} style={{ marginRight: 10 }} color='white' size={30} />
-        }
-      </div>
+        <div className='image'>
+          <img className='myImage' src={cardData.image2} alt={cardData.alt2} />
+          <div
+            onMouseEnter={() => setIsAnimating(true)}
+            onMouseLeave={() => setIsAnimating(false)}
+            className={`hover-animal ${isAnimating ? 'hover-animal-hover' : 'hover-animal'}`}
+            onClick={() => {
+              setModal(true)
+              setAccessor(cardData.acc2)
+            }}>
+            <p className={`animal-name ${isAnimating ? 'animal-name-hover' : 'animal-name'}`}>{cardData.name2}</p>
+            <p className={`click-more ${isAnimating ? 'click-more-hover' : 'click-more'}`}>click for more info</p>
+          </div>
+        </div>
+      </ReactCardFlip>
+      {zeroCircle()}
+      {oneCircle()}
     </div>
   )
 }
