@@ -99,14 +99,16 @@ function ListSpecies() {
   const [modal, setModal] = useState(false)
 
   return (
-    <div className='imagesContainer' >
-      {cardData.map((item) =>
-        <DynCard
-          cardData={item}
-          setAccessor={setAccessor}
-          setModal={setModal}
-        />
-      )}
+    <div className='imagesContainer'>
+      <div className="outer-card-flipper-container">
+        {cardData.map((item) =>
+          <DynCard
+            cardData={item}
+            setAccessor={setAccessor}
+            setModal={setModal}
+          />
+        )}
+      </div>
 
       {modal ?
         <Modal

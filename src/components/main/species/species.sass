@@ -1,15 +1,20 @@
 .imagesContainer
+  width: 100%
   display: flex
   flex-wrap: wrap
   opacity: 80%
   justify-content: center
   margin-top: 20vh
   z-index: 10
-  height: 150vh
+  height: 100vh
+  @media screen and ( max-width: 1115px )
+    height: 150vh
+  @media screen and ( max-width: 520px )
+    height: 300vh
 
 .myImage
   border-radius: 10px
-  width: 15vw
+  width: 250px
   height: 40vh
   object-fit: cover
   position: relative
@@ -17,18 +22,17 @@
   justify-content: center
   z-index: 1
 
-@media (max-width: 1480px)
-  .myImage
-    width: 20vw
+//   .myImage
+//     width: 20vw
 
-@media (max-width: 1000px)
-  .myImage
-    width: 25vw
+// @media (max-width: 1000px)
+//   .myImage
+//     width: 25vw
 
-@media (max-width: 720px)
-  .imagesContainer
-    margin-top: 5vh
-    height: 110vh
+// @media (max-width: 720px)
+//   .imagesContainer
+//     margin-top: 5vh
+//     height: 110vh
 
-  .myImage
-    width: 40vw
+//   .myImage
+//     width: 40vw

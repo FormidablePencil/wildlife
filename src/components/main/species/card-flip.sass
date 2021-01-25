@@ -1,8 +1,15 @@
-.card-container
-  flex-wrap: nowrap
+.outer-card-flipper-container
   display: flex
-  flex-direction: column
-  margin: 5vw
+  flex-wrap: wrap
+
+.card-container
+  min-width: 260px
+  // margin: 10px
+  height: 350px
+  position: relative
+  display: flex
+  flex: 1
+  // margin: 5vw
 
 .hover-animal
   width: 100%
@@ -45,16 +52,45 @@
   transition: bottom .5s, font-size .3s
 
 .card-fipper
-  transition: transform 1s
-  background-color: #fff
+  position: absolute
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  width: 250px
+  height: 1000px
+  transition: transform .4s ease-in-out  .5s
 
 .flipped
-  position: absolute
-  transform: rotateX(90deg)
-  transition: transform 1s
+  transition: transform .4s ease-in-out 
+  transform: rotateY(90deg)
 
 // .front-card
 //   position: absolute
 
 // .back-card
 //   position: absolute
+
+.btn-flip-container
+  // border-radius: 10px
+  position: absolute
+  left: 0
+  right: 0
+  margin-left: auto
+  margin-right: auto
+  bottom: -10px
+  width: 260px
+  display: flex
+  flex-direction: row
+
+  .flip-btn
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 150px
+    margin: 5px
+    height: 30px
+    background-color: #C89C64
+    border-radius: 8px
+    &:hover
+      cursor: pointer
