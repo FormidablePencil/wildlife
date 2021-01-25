@@ -1,20 +1,26 @@
-import React, { useState } from 'react'
+import React, { memo, useMemo, useState } from 'react'
 import ReactCardFlip from 'react-card-flip'
 import { VscCircleFilled, VscCircleOutline } from 'react-icons/vsc'
-import Modal from '../components/main/species/modal/Modal'
 import '../components/main/species/card-flip.sass'
 
 export interface DynCardT {
   image1, image2, name1, name2, acc1, acc2, alt1, alt2
 }
 
-export const DynCard = ({ cardData, setAccessor, setModal }: any) => {
+const ZeroCircle = ({ flipMe, zero }) =>
+  flipMe === 0
+    ? <VscCircleFilled color='white' size={30} />
+    : <VscCircleOutline color='white' size={30} onClick={zero} />
+const OneCircle = ({ flipMe, one }) =>
+  flipMe === 1
+    ? <VscCircleFilled color='white' size={30} />
+    : <VscCircleOutline color='white' size={30} onClick={one} />
+
+export const DynCard = memo(({ cardData, setAccessor, setModal }: any) => {
   const [isAnimating, setIsAnimating] = useState(false)
   const [isFlipped, setIsFlipped] = useState(false)
   const [flipMe, setFlipMe] = useState(0)
 
-  const zeroCircle = () => flipMe === 0 ? <VscCircleFilled color='white' size={30} /> : <VscCircleOutline color='white' size={30} onClick={zero} />
-  const oneCircle = () => flipMe === 1 ? <VscCircleFilled color='white' size={30} /> : <VscCircleOutline color='white' size={30} onClick={one} />
 
   const zero = () => {
     setFlipMe(0)
@@ -27,13 +33,13 @@ export const DynCard = ({ cardData, setAccessor, setModal }: any) => {
 
   return (
     <div className='card-container'>
-      <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
-        <div className='image'>
+      <div className={`card-fipper`}>
+        <div className={`image front-card ${isFlipped ? 'flipped' : ''}`}>
           <img className='myImage' src={cardData.image1} alt={cardData.alt1} />
           <div
             onMouseEnter={() => setIsAnimating(true)}
             onMouseLeave={() => setIsAnimating(false)}
-            className={`hover-animal ${isAnimating ? 'hover-animal-hover' : 'hover-animal'}`}
+            className={`hover-animal`}
             onClick={() => {
               setModal(true)
               setAccessor(cardData.acc1)
@@ -43,12 +49,12 @@ export const DynCard = ({ cardData, setAccessor, setModal }: any) => {
           </div>
         </div>
 
-        <div className='image'>
+        <div className={`image back-card ${!isFlipped ? 'flipped' : ''}`}>
           <img className='myImage' src={cardData.image2} alt={cardData.alt2} />
           <div
             onMouseEnter={() => setIsAnimating(true)}
             onMouseLeave={() => setIsAnimating(false)}
-            className={`hover-animal ${isAnimating ? 'hover-animal-hover' : 'hover-animal'}`}
+            className={`hover-animal`}
             onClick={() => {
               setModal(true)
               setAccessor(cardData.acc2)
@@ -57,9 +63,9 @@ export const DynCard = ({ cardData, setAccessor, setModal }: any) => {
             <p className={`click-more ${isAnimating ? 'click-more-hover' : 'click-more'}`}>click for more info</p>
           </div>
         </div>
-      </ReactCardFlip>
-      {zeroCircle()}
-      {oneCircle()}
+      </div>
+      <ZeroCircle flipMe={flipMe} zero={zero} />
+      <OneCircle flipMe={flipMe} one={one} />
     </div>
   )
-}
+})
