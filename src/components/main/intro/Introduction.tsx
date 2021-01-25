@@ -1,7 +1,7 @@
 import React from 'react'
 import './intro.sass'
 
-function Introduction({TigerNew}) {
+function Introduction({ TigerNew }) {
 
   const arrOfText = [
     "Lorem ipsum dolor sit amet, cot cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -16,7 +16,7 @@ function Introduction({TigerNew}) {
       <div className='container'>
         <div className='orangeBox'>
           {arrOfText.map(text =>
-            <h1 className='orangeText'>{text}</h1>
+            <h1>{text}</h1>
           )}
         </div>
         <div className='grayBox'>

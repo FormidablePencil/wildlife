@@ -13,8 +13,8 @@ export const DynCard = ({ cardData, setAccessor, setModal }: any) => {
   const [isFlipped, setIsFlipped] = useState(false)
   const [flipMe, setFlipMe] = useState(0)
 
-  const zeroCircle = () => flipMe === 0 ? <VscCircleFilled color='white' /> : <VscCircleOutline color='white' onClick={zero} />
-  const oneCircle = () => flipMe === 1 ? <VscCircleFilled color='white' /> : <VscCircleOutline color='white' onClick={one} />
+  const zeroCircle = () => flipMe === 0 ? <VscCircleFilled color='white' size={30} /> : <VscCircleOutline color='white' size={30} onClick={zero} />
+  const oneCircle = () => flipMe === 1 ? <VscCircleFilled color='white' size={30} /> : <VscCircleOutline color='white' size={30} onClick={one} />
 
   const zero = () => {
     setFlipMe(0)
