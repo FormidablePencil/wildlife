@@ -9,7 +9,7 @@ export const DynArticle = ({ articleData }: { articleData: DynArticleT }) => {
       <p className='title'>{articleData.title}</p>
       <p className='description'>{articleData.description}</p>
 
-      <a href={articleData.link}>
+      <a target='__blank' href={articleData.link}>
         <button className='link-button'>Go to Article</button>
       </a>
     </div>

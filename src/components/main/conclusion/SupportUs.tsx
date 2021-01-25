@@ -2,7 +2,7 @@ import React from 'react'
 import './support.sass'
 
 function SupportUs() {
-  return (
+  return ( 
     <div className='support-container'>
       <h1 className='support-text'>
         Begin Helping Wildlife!

@@ -7,17 +7,17 @@ function Article() {
   const articleData: DynArticleT[] = [
     {
       title: 'Stories on our success on animal conservation so far',
-      description: 'm ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor',
+      description: 'Top stories that proved that wildlife conservation efforts were not in vain. We saved many animals and you see ten of the top stories of how we saved animals like whales, gorillas, the bald eagle and many more.',
       link: 'https://www.weforum.org/agenda/2020/03/conservation-stories-on-world-wildlife-day/',
     },
     {
       title: 'How we can help animals',
-      description: 'm ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor',
+      description: 'Ways you can help wildlife, whether it be by donating, joining a team or simply spreading awareness so that bills could be past to better protect wildlife.',
       link: 'https://www.worldwildlife.org/how-to-help',
     },
     {
       title: 'Articles on wildlife conservation',
-      description: 'm ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolor',
+      description: 'Articles that talk about overall climate changes and the impact of it to the wildlife and other issues on people effecting wildlife, providing solutions on how to stop effecting wildlife',
       link: 'https://theconversation.com/us/topics/wildlife-conservation-4235'
     },
   ]

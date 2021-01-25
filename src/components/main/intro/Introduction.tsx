@@ -4,9 +4,13 @@ import './intro.sass'
 function Introduction({ TigerNew }) {
 
   const arrOfText = [
-    "Lorem ipsum dolor sit amet, cot cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ssse cillum doloreorum.",
-    "Lorem ipsum dolor sit amet, cot cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "About 36% of species are humans, 60% being farm animals and a tiny 4% of all the mammals on earth being a part of wildlife",
+    "We are not only effecting a particular species, but rather, the whole ecosystem.",
+    "If we do nothing you can consider your children from seeing rhinos, cheetahs, polar bears, and gorillas by 2050 a pipe dream.",
+  ]
+
+  const bottomText = [
+    "click on any of the images to view more information about that specific species."
   ]
 
   return (
@@ -20,7 +24,7 @@ function Introduction({ TigerNew }) {
           )}
         </div>
         <div className='grayBox'>
-          <h2>{arrOfText[0]}</h2>
+          <h2>{bottomText[0]}</h2>
         </div>
       </div>
     </div>
