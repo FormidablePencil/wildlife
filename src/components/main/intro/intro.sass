@@ -1,7 +1,6 @@
 .headerImage
   height: 70vh
   width: 100%
-  display: block
   object-fit: cover
 
 .container
@@ -43,11 +42,33 @@
     width: 20vw
     margin-right: 15vw
 
-@media (max-width: 620px)
+@media (max-width: 1490px)
+  .orangeBox
+    h1
+      width: 40%
+      font-size: 18px
+
+  .grayBox
+    h2
+      font-size: 18px
+
+@media (max-width: 1080px)
+  .orangeBox
+    h1
+      font-size: 18px
+      width: 50%
+
+  .grayBox
+    h2
+      width: 70%
+      font-size: 18px
+
+@media (max-width: 720px)
   .container
     display: flex
     justify-content: center
     position: relative
+    height: 42vh
 
   .orangeBox
     position: absolute
@@ -60,12 +81,16 @@
     z-index: 101
     h1
       width: 80%
+      margin-right: 10vw
+      font-size: 20px
 
   .grayBox
+    border-radius: 0px
     position: absolute
-    top: 29vh
+    bottom: 0vh
     width: 100%
-    z-index: 0
-    height: 20vh
+    z-index: 100
+    height: 15vh
     h2
       width: 80%
+      font-size: 16px

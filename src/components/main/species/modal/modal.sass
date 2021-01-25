@@ -56,9 +56,18 @@ h4
   font-family: nunito-light
   word-spacing: 1px
 
-.anim
-  transform: rotateY(180deg)
-  transition: transform 1s
-.anim-off
-  transition: rotateY 1s
-  transform: rotateY(0deg)
+@media (max-width: 620px)
+  .modal-bg
+    left: 0%
+    width: 100vw
+    padding-bottom: 2vh
+  .facts
+    h2
+      font-size: 16px
+    h4
+      font-size: 14px
+
+h4
+  font-size: 14px
+.desc
+  font-size: 16px

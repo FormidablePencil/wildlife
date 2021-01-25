@@ -44,7 +44,7 @@ function Modal({ modal, setModal, accessor }) {
         </div >
 
         <div style={{ width: '60%', marginLeft: '2vw' }}>
-          <h2>Description:</h2>
+          <h2 className='desc'>Description:</h2>
           <h4 style={{ width: '100%' }}>{animalsApi[accessor].Description}</h4>
         </div>
       </div>

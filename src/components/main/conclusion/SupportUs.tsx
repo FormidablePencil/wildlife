@@ -5,7 +5,7 @@ function SupportUs() {
   return (
     <div className='support-container'>
       <h1 className='support-text'>
-        Start Helping Wildlife!
+        Begin Helping Wildlife!
       </h1>
     </div>
   )

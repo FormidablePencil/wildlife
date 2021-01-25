@@ -41,7 +41,7 @@ function MainPage(props) {
         <div className='orangeBox1' />
         <div className='orangeBox2' />
         <div className='orangeBox3' />
-        <div className='orangeBox4' />
+        <div className='orangeBox4' /> 
         <div className='orangeBox5' />
         <div className='grayBox1' />
         <div className='grayBox2' />

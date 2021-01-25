@@ -14,7 +14,7 @@ import RedPanda from '../../../assets/images/redPanda.jpg'
 import PolarBear from '../../../assets/images/polarBear.jpg'
 import Modal from './modal/Modal'
 import './card-flip.sass'
-import './species.sass'
+import './species.sass' 
 
 function ListSpecies() {
   const [accessor, setAccessor] = useState(0)
